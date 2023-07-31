@@ -1,0 +1,15 @@
+<div class="d-flex bg-transparent mx-0 justify-content-evenly flex-wrap">
+    <div *ngFor="let categoryObj of categoryList">
+        <a class="text-decoration-none" [routerLink]="['/catalogo/' + categoryObj.path]">
+            <div class="card rounded-5 border-1 zoom bg-dark px-4 py-2 border-primary my-5" style="width: 30rem">
+                <div class="row ">
+                    <div *ngIf="showCategoryImg" class="d-flex justify-content-center">
+                        <img src="assets/images/{{categoryObj.name}}.png" class="img-fluid rounded-start"
+                            alt="{{categoryObj.name}}" style="width: 10rem;">
+                    </div>
+                    <h2 class="card-title text-white p-1 m-0 display-11 text-center">{{categoryObj.name}}</h2>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
