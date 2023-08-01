@@ -26,10 +26,21 @@ export class CatalogoComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.idCategoria = this.route.snapshot.paramMap.get('idCategoria') || undefined;
-    this.idSubcategoria = this.route.snapshot.paramMap.get('idSubcategoria') || undefined;
-    this.idProdotto = this.route.snapshot.paramMap.get('idProdotto') || undefined;
-    this.idItem = this.route.snapshot.paramMap.get('idItem') || undefined;
+    this.route.params.subscribe((params) => {
+      console.log("ARRIVANO DEI PARAMETRI: ", params);
+      this.aggiornaPagina(params);
+    })
+  }
+
+  private aggiornaPagina(params: any) {
+    this.subcategories = [];
+    this.items =  [];
+    this.obj = undefined;
+
+    this.idCategoria = params?.idCategoria || undefined;
+    this.idSubcategoria = params?.idSubcategoria || undefined;
+    this.idProdotto = params?.idProdotto || undefined;
+    this.idItem = params?.idItem || undefined;
 
     if (this.idCategoria && this.idSubcategoria && this.idProdotto && this.idItem) {
       this.getAnItemFromCommonServices(this.idCategoria, this.idSubcategoria, this.idProdotto, this.idItem);
@@ -45,22 +56,38 @@ export class CatalogoComponent implements OnInit {
   }
 
   private getAllSubcategorieFromCommonServices(nomeCategoria: string) {
+    console.log("CATALOGO getAllSubcategorieFromCommonServices", nomeCategoria);
     this.commonService.getAllCategorie().subscribe(categorie => {
-      categorie.forEach(categoria => {
-        if (categoria.nome == nomeCategoria) {
-          if (categoria.hasSubCategories) {
-            this.subcategories = categoria.sottocategorie.map(sottocategoria => ({
-              name: sottocategoria.nome,
-              path: nomeCategoria + '/' + sottocategoria.nome
-            }));
-          } else {
-            this.items = categoria.items?.map(item => ({
-              data: item,
-              path: nomeCategoria + '/' + item.id
-            }));
-          }
-        }
-      });
+      const categoriaSelezionata = categorie.find(c => c.nome == nomeCategoria);
+      console.log("TROVO LA CATEGORIA", categoriaSelezionata);
+      if (categoriaSelezionata?.hasSubCategories) {
+        this.subcategories = categoriaSelezionata.sottocategorie.map(sottocategoria => ({
+          name: sottocategoria.nome,
+          path: nomeCategoria + '/' + sottocategoria.nome
+        }))
+      } else {
+        this.items = categoriaSelezionata?.items?.map(item => ({
+          data: item,
+          path: nomeCategoria + '/' + item.id
+        }));        
+      }
+
+      // categorie.forEach(categoria => {
+      //   if (categoria.nome == nomeCategoria) {
+      //     if (categoria.hasSubCategories) {
+      //       this.subcategories = categoria.sottocategorie.map(sottocategoria => ({
+      //         name: sottocategoria.nome,
+      //         path: nomeCategoria + '/' + sottocategoria.nome
+      //       }));
+      //     } else {
+      //       this.items = categoria.items?.map(item => ({
+      //         data: item,
+      //         path: nomeCategoria + '/' + item.id
+      //       }));
+      //     }
+      //   }
+      // });
+
     });
   }
 
