@@ -39,7 +39,8 @@
                 <ul class="nav">
                     <div *ngFor="let categoryObj of categoryList">
                         <li class="nav-item">
-                            <a class="nav-link fs-5" href="">{{categoryObj.name}}</a>
+                            <a class="nav-link fs-5"
+                                [routerLink]="['/catalogo/' + categoryObj.path]">{{categoryObj.name}}</a>
                         </li>
                     </div>
                     <li class="nav-item">

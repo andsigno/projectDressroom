@@ -17,13 +17,24 @@
                                     "nome": "Jeans",
                                     "img": "Jeans.webp",
                                     "prezzo": 100.00,
-                                    "descrizione": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit accusantium obcaecati ut."
+                                    "descrizione": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit accusantium obcaecati ut.",
+                                    "saletf": true
                                 },
                                 {
-                                    "id": "pantalone2"
+                                    "id": "pantalone2",
+                                    "nome": "Pantalone",
+                                    "img": "pantalone.jpg",
+                                    "prezzo": 80.00,
+                                    "descrizione": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit accusantium obcaecati ut.",
+                                    "saletf": true
                                 },
                                 {
-                                    "id": "pantalone3"
+                                    "id": "pantalone3",
+                                    "nome": "Pantaloncini",
+                                    "img": "Pantaloncini.jpeg",
+                                    "prezzo": 50.00,
+                                    "descrizione": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit accusantium obcaecati ut.",
+                                    "saletf": false
                                 }
                             ]
                         },
@@ -236,7 +247,7 @@
                 {
                     "nome": "Accessori",
                     "hasSubCategories": false,
-                    "prodotti": [
+                    "items": [
                         {
                             "id": "accessoriod1"
                         },
