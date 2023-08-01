@@ -16,6 +16,7 @@ import { ProdottoDettaglioComponent } from './components/prodotto-dettaglio/prod
 import { LoginComponent } from './pages/login/login.component';
 import { JoinComponent } from './pages/join/join.component';
 import { CartComponent } from './pages/cart/cart.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { CartComponent } from './pages/cart/cart.component';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
