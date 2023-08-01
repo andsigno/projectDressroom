@@ -8,6 +8,6 @@ import { Item } from 'src/app/interfaces/Categoria';
 })
 export class ProdottoDettaglioComponent {
 
-  @Input() itemList?: Item[];
+  @Input() obj?: Item;
 
 }

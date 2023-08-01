@@ -37,15 +37,11 @@
             <div class="col-4"></div>
             <div class="col-4 d-flex align-items-center justify-content-center">
                 <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link fs-5" href="">Uomo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fs-5" href="">Donna</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fs-5" href="">Bambino</a>
-                    </li>
+                    <div *ngFor="let categoryObj of categoryList">
+                        <li class="nav-item">
+                            <a class="nav-link fs-5" href="">{{categoryObj.name}}</a>
+                        </li>
+                    </div>
                     <li class="nav-item">
                         <a class="nav-link fs-5" href="">Saldi</a>
                     </li>

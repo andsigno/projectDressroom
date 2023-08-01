@@ -13,6 +13,9 @@ import { CategoriaComponent } from './components/categoria/categoria.component';
 import { BImageComponent } from './components/b-image/b-image.component';
 import { ProdottiComponent } from './components/prodotti/prodotti.component';
 import { ProdottoDettaglioComponent } from './components/prodotto-dettaglio/prodotto-dettaglio.component';
+import { LoginComponent } from './pages/login/login.component';
+import { JoinComponent } from './pages/join/join.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 
 @NgModule({
@@ -25,7 +28,10 @@ import { ProdottoDettaglioComponent } from './components/prodotto-dettaglio/prod
     CategoriaComponent,
     BImageComponent,
     ProdottiComponent,
-    ProdottoDettaglioComponent
+    ProdottoDettaglioComponent,
+    LoginComponent,
+    JoinComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
