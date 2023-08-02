@@ -1,310 +1,318 @@
 {
-    "categorie": [
+  "categorie": [
+    {
+      "nome": "Uomo",
+      "hasSubCategories": true,
+      "sottocategorie": [
         {
-            "nome": "Uomo",
-            "hasSubCategories": true,
-            "sottocategorie": [
+          "nome": "Abbigliamento",
+          "hasSubCategories": true,
+          "prodotti": [
+            {
+              "nome": "Pantaloni",
+              "hasSubCategories": false,
+              "items": [
                 {
-                    "nome": "Abbigliamento",
-                    "hasSubCategories": true,
-                    "prodotti": [
-                        {
-                            "nome": "Pantaloni",
-                            "hasSubCategories": false,
-                            "items": [
-                                {
-                                    "id": "pantalone1",
-                                    "nome": "Jeans",
-                                    "img": "Jeans.webp",
-                                    "prezzo": 100.00,
-                                    "descrizione": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit accusantium obcaecati ut.",
-                                    "saletf": true
-                                },
-                                {
-                                    "id": "pantalone2",
-                                    "nome": "Pantalone",
-                                    "img": "pantalone.jpg",
-                                    "prezzo": 80.00,
-                                    "descrizione": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit accusantium obcaecati ut.",
-                                    "saletf": true
-                                },
-                                {
-                                    "id": "pantalone3",
-                                    "nome": "Pantaloncini",
-                                    "img": "Pantaloncini.jpeg",
-                                    "prezzo": 50.00,
-                                    "descrizione": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit accusantium obcaecati ut.",
-                                    "saletf": false
-                                }
-                            ]
-                        },
-                        {
-                            "nome": "Camicie",
-                            "hasSubCategories": false,
-                            "items": [
-                                {
-                                    "id": "Camicia1"
-                                },
-                                {
-                                    "id": "Camicia2"
-                                },
-                                {
-                                    "id": "Camicia3"
-                                }
-                            ]
-                        },
-                        {
-                            "nome": "T-shirt",
-                            "hasSubCategories": false,
-                            "items": [
-                                {
-                                    "id": "T-shirt1"
-                                },
-                                {
-                                    "id": "T-shirt2"
-                                },
-                                {
-                                    "id": "T-shirt3"
-                                }
-                            ]
-                        },
-                        {
-                            "nome": "Cappotti",
-                            "hasSubCategories": false,
-                            "items": [
-                                {
-                                    "id": "Cappotto1"
-                                },
-                                {
-                                    "id": "Cappotto2"
-                                },
-                                {
-                                    "id": "Cappotto3"
-                                }
-                            ]
-                        }
-                    ]
+                  "id": "pantalone1",
+                  "nome": "Jeans",
+                  "img": "Jeans.webp",
+                  "prezzo": 100,
+                  "descrizione": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit accusantium obcaecati ut.",
+                  "saletf": true
                 },
                 {
-                    "nome": "Scarpe",
-                    "hasSubCategories": true,
-                    "prodotti": [
-                        {
-                            "nome": "Sneakers",
-                            "hasSubCategories": false,
-                            "items": [
-                                {
-                                    "id": "sneak1"
-                                },
-                                {
-                                    "id": "sneak2"
-                                },
-                                {
-                                    "id": "sneak3"
-                                }
-                            ]
-                        },
-                        {
-                            "nome": "Eleganti",
-                            "hasSubCategories": false,
-                            "items": [
-                                {
-                                    "id": "eleganto1"
-                                },
-                                {
-                                    "id": "eleganto2"
-                                },
-                                {
-                                    "id": "eleganto3"
-                                }
-                            ]
-                        }
-                    ]
+                  "id": "pantalone2",
+                  "nome": "Pantalone",
+                  "img": "pantalone.jpg",
+                  "prezzo": 80,
+                  "descrizione": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit accusantium obcaecati ut.",
+                  "saletf": true
                 },
                 {
-                    "nome": "Accessori",
-                    "hasSubCategories": false,
-                    "items": [
-                        {
-                            "nome": "accessoriou1"
-                        },
-                        {
-                            "nome": "accessoriou2"
-                        },
-                        {
-                            "nome": "accessoriou3"
-                        }
-                    ]
+                  "id": "pantalone3",
+                  "nome": "Pantaloncini",
+                  "img": "Pantaloncini.jpeg",
+                  "prezzo": 50,
+                  "descrizione": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit accusantium obcaecati ut.",
+                  "saletf": false
                 }
-            ]
+              ]
+            },
+            {
+              "nome": "Camicie",
+              "hasSubCategories": false,
+              "items": [
+                {
+                  "id": "Camicia1"
+                },
+                {
+                  "id": "Camicia2"
+                },
+                {
+                  "id": "Camicia3"
+                }
+              ]
+            },
+            {
+              "nome": "T-shirt",
+              "hasSubCategories": false,
+              "items": [
+                {
+                  "id": "T-shirt1"
+                },
+                {
+                  "id": "T-shirt2"
+                },
+                {
+                  "id": "T-shirt3"
+                }
+              ]
+            },
+            {
+              "nome": "Cappotti",
+              "hasSubCategories": false,
+              "items": [
+                {
+                  "id": "Cappotto1"
+                },
+                {
+                  "id": "Cappotto2"
+                },
+                {
+                  "id": "Cappotto3"
+                }
+              ]
+            }
+          ]
         },
         {
-            "nome": "Donna",
-            "hasSubCategories": true,
-            "sottocategorie": [
+          "nome": "Scarpe",
+          "hasSubCategories": true,
+          "prodotti": [
+            {
+              "nome": "Sneakers",
+              "hasSubCategories": false,
+              "items": [
                 {
-                    "nome": "Abbigliamento",
-                    "hasSubCategories": true,
-                    "prodotti": [
-                        {
-                            "nome": "Pantaloni",
-                            "hasSubCategories": false,
-                            "items": [
-                                {
-                                    "id": "pantalone1"
-                                },
-                                {
-                                    "id": "pantalone2"
-                                },
-                                {
-                                    "id": "pantalone3"
-                                }
-                            ]
-                        },
-                        {
-                            "nome": "Camicie",
-                            "hasSubCategories": false,
-                            "items": [
-                                {
-                                    "id": "Camicia1"
-                                },
-                                {
-                                    "id": "Camicia2"
-                                },
-                                {
-                                    "id": "Camicia3"
-                                }
-                            ]
-                        },
-                        {
-                            "nome": "Vestiti",
-                            "hasSubCategories": false,
-                            "items": [
-                                {
-                                    "id": "Vestito1"
-                                },
-                                {
-                                    "id": "Vestito2"
-                                },
-                                {
-                                    "id": "Vestito3"
-                                }
-                            ]
-                        },
-                        {
-                            "nome": "Giacche",
-                            "hasSubCategories": false,
-                            "items": [
-                                {
-                                    "id": "Giacca1"
-                                },
-                                {
-                                    "id": "Giacca2"
-                                },
-                                {
-                                    "id": "Giacca3"
-                                }
-                            ]
-                        }
-                    ]
+                  "id": "sneak1"
                 },
                 {
-                    "nome": "Scarpe",
-                    "hasSubCategories": true,
-                    "prodotti": [
-                        {
-                            "nome": "Sneakers",
-                            "hasSubCategories": false,
-                            "items": [
-                                {
-                                    "id": "sneak1"
-                                },
-                                {
-                                    "id": "sneak2"
-                                },
-                                {
-                                    "id": "sneak3"
-                                }
-                            ]
-                        },
-                        {
-                            "nome": "Eleganti",
-                            "hasSubCategories": false,
-                            "items": [
-                                {
-                                    "id": "eleganta1"
-                                },
-                                {
-                                    "id": "eleganta2"
-                                },
-                                {
-                                    "id": "eleganta3"
-                                }
-                            ]
-                        }
-                    ]
+                  "id": "sneak2"
                 },
                 {
-                    "nome": "Accessori",
-                    "hasSubCategories": false,
-                    "items": [
-                        {
-                            "id": "accessoriod1"
-                        },
-                        {
-                            "id": "accessoriod2"
-                        },
-                        {
-                            "id": "accessoriod3"
-                        }
-                    ]
+                  "id": "sneak3"
                 }
-            ]
+              ]
+            },
+            {
+              "nome": "Eleganti",
+              "hasSubCategories": false,
+              "items": [
+                {
+                  "id": "eleganto1"
+                },
+                {
+                  "id": "eleganto2"
+                },
+                {
+                  "id": "eleganto3"
+                }
+              ]
+            }
+          ]
         },
         {
-            "nome": "Bambino",
-            "hasSubCategories": false,
-            "items": [
-                {
-                    "id": "Bambino1",
-                    "nome": "Baby",
-                    "img": "",
-                    "prezzo": 100.00,
-                    "descrizione": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit accusantium obcaecati ut."
-                },
-                {
-                    "id": "Bambino2"
-                },
-                {
-                    "id": "Bambino3"
-                }
-            ]
+          "nome": "Accessori",
+          "hasSubCategories": false,
+          "items": [
+            {
+              "nome": "accessoriou1"
+            },
+            {
+              "nome": "accessoriou2"
+            },
+            {
+              "nome": "accessoriou3"
+            }
+          ]
         }
-    ],
-    "utenti": [
+      ]
+    },
+    {
+      "nome": "Donna",
+      "hasSubCategories": true,
+      "sottocategorie": [
         {
-            "ID": "1",
-            "nome": "Marco",
-            "cognome": "Rossi",
-            "data_di_nascita": "2000-01-20",
-            "email": "marco@mail.it",
-            "password": "passwordmarco"
+          "nome": "Abbigliamento",
+          "hasSubCategories": true,
+          "prodotti": [
+            {
+              "nome": "Pantaloni",
+              "hasSubCategories": false,
+              "items": [
+                {
+                  "id": "pantalone1"
+                },
+                {
+                  "id": "pantalone2"
+                },
+                {
+                  "id": "pantalone3"
+                }
+              ]
+            },
+            {
+              "nome": "Camicie",
+              "hasSubCategories": false,
+              "items": [
+                {
+                  "id": "Camicia1"
+                },
+                {
+                  "id": "Camicia2"
+                },
+                {
+                  "id": "Camicia3"
+                }
+              ]
+            },
+            {
+              "nome": "Vestiti",
+              "hasSubCategories": false,
+              "items": [
+                {
+                  "id": "Vestito1"
+                },
+                {
+                  "id": "Vestito2"
+                },
+                {
+                  "id": "Vestito3"
+                }
+              ]
+            },
+            {
+              "nome": "Giacche",
+              "hasSubCategories": false,
+              "items": [
+                {
+                  "id": "Giacca1"
+                },
+                {
+                  "id": "Giacca2"
+                },
+                {
+                  "id": "Giacca3"
+                }
+              ]
+            }
+          ]
         },
         {
-            "ID": "2",
-            "nome": "Giuseppe",
-            "cognome": "Verdi",
-            "data_di_nascita": "02-02-2001",
-            "email": "giuseppe@mail.it",
-            "password": "passwordgiuseppe"
+          "nome": "Scarpe",
+          "hasSubCategories": true,
+          "prodotti": [
+            {
+              "nome": "Sneakers",
+              "hasSubCategories": false,
+              "items": [
+                {
+                  "id": "sneak1"
+                },
+                {
+                  "id": "sneak2"
+                },
+                {
+                  "id": "sneak3"
+                }
+              ]
+            },
+            {
+              "nome": "Eleganti",
+              "hasSubCategories": false,
+              "items": [
+                {
+                  "id": "eleganta1"
+                },
+                {
+                  "id": "eleganta2"
+                },
+                {
+                  "id": "eleganta3"
+                }
+              ]
+            }
+          ]
         },
         {
-            "ID": "3",
-            "nome": "Giulia",
-            "cognome": "Bianchi",
-            "data_di_nascita": "03-03-2002",
-            "email": "giulia@mail.it",
-            "password": "passwordgiulia"
+          "nome": "Accessori",
+          "hasSubCategories": false,
+          "items": [
+            {
+              "id": "accessoriod1"
+            },
+            {
+              "id": "accessoriod2"
+            },
+            {
+              "id": "accessoriod3"
+            }
+          ]
         }
-    ]
+      ]
+    },
+    {
+      "nome": "Bambino",
+      "hasSubCategories": false,
+      "items": [
+        {
+          "id": "Bambino1",
+          "nome": "Baby",
+          "img": "",
+          "prezzo": 100,
+          "descrizione": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit accusantium obcaecati ut."
+        },
+        {
+          "id": "Bambino2"
+        },
+        {
+          "id": "Bambino3"
+        }
+      ]
+    }
+  ],
+  "utenti": [
+    {
+      "id": "1",
+      "nome": "Marco",
+      "cognome": "Rossi",
+      "data_di_nascita": "2000-01-20",
+      "email": "marco@mail.it",
+      "password": "passwordmarco"
+    },
+    {
+      "id": "2",
+      "nome": "Giuseppe",
+      "cognome": "Verdi",
+      "data_di_nascita": "02-02-2001",
+      "email": "giuseppe@mail.it",
+      "password": "passwordgiuseppe"
+    },
+    {
+      "id": "3",
+      "nome": "Giulia",
+      "cognome": "Bianchi",
+      "data_di_nascita": "03-03-2002",
+      "email": "giulia@mail.it",
+      "password": "passwordgiulia"
+    },
+    {
+      "nome": "ciccio",
+      "cognome": "bas",
+      "data_di_nascita": "2023-08-02T12:53:31.091Z",
+      "email": "abjhvidfnb@fgfg.it",
+      "password": "cfgudytrfvgh",
+      "id": "0A6VJCy"
+    }
+  ]
 }

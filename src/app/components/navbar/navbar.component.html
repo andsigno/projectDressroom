@@ -7,12 +7,12 @@
                         <a class="nav-link fs-5" [routerLink]="'/login'">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-5" href="../pages/join.html">Join</a>
+                        <a class="nav-link fs-5" [routerLink]="'/join'">Join</a>
                     </li>
                 </ul>
                 <ul class="nav" *ngIf="utenteLoggato">
                     <li class="nav-item">
-                        <a class="nav-link fs-5" >{{ utenteLoggato?.nome }}</a>
+                        <a class="nav-link fs-5">{{ utenteLoggato.nome + utenteLoggato.cognome }}</a>
                     </li>
                 </ul>
             </div>

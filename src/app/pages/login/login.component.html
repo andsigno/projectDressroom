@@ -1,47 +1,52 @@
-<div class="row d-flex align-items-center justify-content-evenly mt-8">
-    <div
-        class="col-4 card d-flex align-items-center justify-content-center rounded-5 border border-3 border-bottom-0 border-primary bg-dark">
-        <h2 class="text-secondary m-0">Accesso</h2>
+<div class="container-fluid mb-5" style="width: 70rem;">
+    <div class="row d-flex align-items-center justify-content-evenly">
+        <div
+            class="col-4 card d-flex align-items-center justify-content-center rounded-5 border border-3 border-bottom-0 border-primary bg-dark">
+            <h2 class="text-secondary m-0 display-1">Accesso</h2>
+        </div>
     </div>
-</div>
-<div class="row d-flex align-items-center justify-content-evenly">
-    <div class="col-4 card d-flex align-items-center justify-content-center rounded-5 border-3 border-primary bg-dark">
-        <form (submit)="login()" class="align-items-center justify-content-center">
-            <div class="row mt-3 mb-1">
-                <label for="inputemail"
-                    class="col-form-label p-0 d-flex align-items-center justify-content-center">email</label>
-            </div>
-            <div class="row mb-4 d-flex align-items-center justify-content-center">
-                <div class="col">
-                    <input type="email" class="form-control bg-dark text-white" id="inputemail" name="email" [(ngModel)]="email">
+    <div class="row d-flex align-items-center justify-content-evenly">
+        <div
+            class="col-4 card d-flex align-items-center justify-content-center rounded-5 border-3 border-primary bg-dark">
+            <form (submit)="login()" class="align-items-center justify-content-center">
+                <div class="row mt-3 mb-1">
+                    <label for="inputemail"
+                        class="col-form-label p-0 d-flex align-items-center justify-content-center">email</label>
                 </div>
-            </div>
-            <div class="row mb-1">
-                <label for="inputpassword"
-                    class="col-form-label p-0 d-flex align-items-center justify-content-center">password</label>
-            </div>
-            <div class="row mb-4 d-flex align-items-center justify-content-center">
-                <div class="col">
-                    <input type="password" class="form-control bg-dark text-white" id="inputpassword" name="password" [(ngModel)]="password">
+                <div class="row mb-4 d-flex align-items-center justify-content-center">
+                    <div class="col">
+                        <input type="email" class="form-control bg-dark text-white" id="inputemail" name="email"
+                            [(ngModel)]="email">
+                    </div>
                 </div>
-            </div>
-            <div class="row my-4">
-                <div class="col d-flex align-items-center justify-content-evenly g-2">
-                    <button 
-                        class="btn btn-dark fs-4 text-primary align-items-center justify-content-evenly border-primary">ACCEDI</button>
+                <div class="row mb-1">
+                    <label for="inputpassword"
+                        class="col-form-label p-0 d-flex align-items-center justify-content-center">password</label>
                 </div>
-                <div class="col d-flex align-items-center justify-content-evenly g-2">
-                    <button (click)="reset()"
-                        class="btn btn-dark fs-4 text-danger align-items-center justify-content-evenly border-danger">ANNULLA</button>
+                <div class="row mb-4 d-flex align-items-center justify-content-center">
+                    <div class="col">
+                        <input type="password" class="form-control bg-dark text-white" id="inputpassword"
+                            name="password" [(ngModel)]="password">
+                    </div>
                 </div>
-            </div>
-        </form>
+                <div class="row my-4">
+                    <div class="col d-flex align-items-center justify-content-evenly g-2">
+                        <button
+                            class="btn btn-dark fs-4 text-primary align-items-center justify-content-evenly border-primary">ACCEDI</button>
+                    </div>
+                    <div class="col d-flex align-items-center justify-content-evenly g-2">
+                        <button (click)="reset()"
+                            class="btn btn-dark fs-4 text-danger align-items-center justify-content-evenly border-danger">ANNULLA</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
-<div class="row d-flex align-items-center justify-content-evenly">
-    <div
-        class="col-4 card d-flex align-items-center justify-content-center rounded-5 border border-3 border-top-0 border-primary bg-dark">
-        <p class="text-secondary my-4"><a class="fs-5" href="../pages/recpass.html">password
-                dimenticata</a></p>
+    <div class="row d-flex align-items-center justify-content-evenly">
+        <div
+            class="col-4 card d-flex align-items-center justify-content-center rounded-5 border border-3 border-top-0 border-primary bg-dark">
+            <p class="text-secondary my-4"><a class="fs-5" href="../pages/recpass.html">password
+                    dimenticata</a></p>
+        </div>
     </div>
 </div>

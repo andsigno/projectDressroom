@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable, map } from 'rxjs';
+import { BehaviorSubject, Observable, map, of, switchMap } from 'rxjs';
 import { Categoria, Prodotto, Sottocategoria } from '../interfaces/Categoria';
 import { Utente } from '../interfaces/Utente';
 
@@ -34,7 +34,7 @@ export class CommonService {
     // presenza di un utente con la stessa email
     const url = '/api/utenti?email=' + credenziali.email;
     // effettuo la chiamata al db
-    return this.http.get<any[]>(url).pipe( 
+    return this.http.get<any[]>(url).pipe(
       // rimappo l'oggetto ricevuto controllando che sia corretto
       map((utenti: any[]) => {
         console.log("RIMAPPO IL RISULTATO", utenti);
@@ -49,8 +49,33 @@ export class CommonService {
           // aggiorno i dati nel servizio sull'utente corrente
           this.utenteLoggato.next(utente);
           return utente;
-        } 
+        }
         return null;
+      })
+    );
+  }
+
+  /**
+     * Metodo per effettuare la registrazione
+     * @param utenteJoin utente che sta effettuando la registrazione
+     * @returns utente se la login è corretta
+     */
+  join(utenteJoin: any): Observable<any> {
+    // creo la url necessaria per interrogare il db sulla 
+    // presenza di un utente con la stessa email
+    const url = '/api/utenti?email=' + utenteJoin.email;
+    // effettuo la chiamata al db per verificase se l'utente esiste già
+    return this.http.get<any[]>(url).pipe(
+      // rimappo l'oggetto ricevuto controllando che sia corretto
+      switchMap((utenti: any[]) => {
+        console.log("RIMAPPO IL RISULTATO", utenti);
+        // verifico se il risultato mi restituisce degli utenti e ritorna null per mostrare errore
+        if (utenti?.length > 0) {
+          return of(null);
+        }
+        // aggiorno i dati nel servizio sull'utente corrente
+        this.utenteLoggato.next(utenteJoin);
+        return this.http.post('/api/utenti', utenteJoin)
       })
     );
   }
