@@ -9,7 +9,7 @@ import { Utente } from '../interfaces/Utente';
 })
 export class CommonService {
 
-  utenteLoggato = new BehaviorSubject(null);
+  utenteLoggato = new BehaviorSubject<Utente | null>(null);
 
   constructor(private http: HttpClient) { }
 
@@ -19,9 +19,9 @@ export class CommonService {
     return this.http.get<any[]>(url);
   }
 
-  getAllUtenti(): Observable<any[]> {
+  getAllUtenti(): Observable<Utente[]> {
     const url = '/api/utenti';
-    return this.http.get<any[]>(url);
+    return this.http.get<Utente[]>(url);
   }
 
   /**
@@ -78,5 +78,18 @@ export class CommonService {
         return this.http.post('/api/utenti', utenteJoin)
       })
     );
+  }
+
+  getUtenteFromToken(token: string): Observable<Utente> {
+    const url = '/api/utenti?token=' + token;
+    return this.http.get<any[]>(url).pipe(
+      map((utenti: any[]) => {
+        let utente = null;
+        if (utenti?.length) {
+          utente = utenti[0];
+        }
+        return utente;
+      })
+    )
   }
 }

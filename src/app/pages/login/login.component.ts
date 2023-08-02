@@ -23,16 +23,16 @@ export class LoginComponent {
       password: this.password
     }
     // stampo le credenzili
-    console.log("AVVIO DEL LOGIN", credenziali); 
+    console.log("AVVIO DEL LOGIN", credenziali);
     this.servizio.login(credenziali).subscribe((risultato) => {
       console.log("LOGIN RISULTATO", risultato);
       if (risultato) {
         this.router.navigateByUrl('/dashboard');
       }
     });
-    return false;   
+    return false;
   }
-  
+
   reset() {
     this.email = "";
     this.password = "";

@@ -46,7 +46,8 @@
                 </div>
                 <div class="row mb-4 d-flex align-items-center justify-content-center">
                     <div class="col">
-                        <input type="text" class="form-control bg-dark" id="inputcitta">
+                        <input type="text" class="form-control bg-dark text-white" id="inputcitta" name="citta"
+                            [(ngModel)]="citta">
                     </div>
                 </div>
                 <div class="row mb-1">
@@ -55,7 +56,8 @@
                 </div>
                 <div class="row mb-4 d-flex align-items-center justify-content-center">
                     <div class="col">
-                        <input type="text" class="form-control bg-dark" id="inputindirizzo">
+                        <input type="text" class="form-control bg-dark text-white" id="inputindirizzo" name="indirizzo"
+                            [(ngModel)]="indirizzo">
                     </div>
                 </div>
                 <div class="row mb-1">
@@ -64,7 +66,8 @@
                 </div>
                 <div class="row mb-4 d-flex align-items-center justify-content-center">
                     <div class="col-auto">
-                        <input type="text" class="form-control bg-dark" id="inputcap">
+                        <input type="text" class="form-control bg-dark text-white" id="inputcap" name="cap"
+                            [(ngModel)]="cap">
                     </div>
                 </div>
                 <div class="row mb-1">
@@ -90,7 +93,8 @@
                 <div class="row mb-1 mt-3">
                     <div class="col m-0 p-0 d-flex align-items-center justify-content-evenly">
                         <div class="form-check m-0 p-0 d-flex align-items-center justify-content-evenly">
-                            <input class="form-check-input m-0 p-0 me-3 bg-dark" type="checkbox" id="mydressroom">
+                            <input class="form-check-input m-0 p-0 me-3 bg-dark" type="checkbox" id="mydressroom"
+                                name="mydr" [(ngModel)]="mydr">
                             <label
                                 class="form-check-label m-0 p-0 text-primary d-flex align-items-center justify-content-evenly"
                                 for="mydressroom">
@@ -103,7 +107,7 @@
                 </div>
                 <div class="row my-4 mb-5">
                     <div class="col d-flex align-items-center justify-content-evenly g-2">
-                        <button (click)="join()"
+                        <button
                             class="btn btn-dark fs-4 text-primary align-items-center justify-content-evenly border-primary">REGISTRATI</button>
                     </div>
                     <div class="col d-flex align-items-center justify-content-evenly g-2">

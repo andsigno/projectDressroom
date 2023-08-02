@@ -16,9 +16,9 @@ export class NavbarComponent {
   utenteLoggato: Utente | null = null;
 
   constructor(
-    private router: Router, 
+    private router: Router,
     private commonService: CommonService
-    ) { }
+  ) { }
 
   goToPage(page: string) {
     this.router.navigateByUrl(page);
@@ -26,11 +26,7 @@ export class NavbarComponent {
 
   ngOnInit(): void {
     this.getAllCategorieFromCommonServices();
-    this.commonService.utenteLoggato.subscribe((utente) => {
-      if(utente) {
-        this.utenteLoggato = utente;
-      }
-    })
+    this.getSessionUtente();
   }
 
   private getAllCategorieFromCommonServices() {
@@ -40,6 +36,25 @@ export class NavbarComponent {
         path: categoria.nome
       }))
     });
+  }
+
+
+  private getSessionUtente() {
+    this.commonService.utenteLoggato.subscribe((utente) => {
+      if (utente) {
+        this.utenteLoggato = utente;
+        sessionStorage.setItem('jwt', utente.token);
+      } else {
+        const jwt = sessionStorage.getItem('jwt');
+        if (jwt) {
+          this.commonService.getUtenteFromToken(jwt).subscribe(
+            (utente) => {
+              this.utenteLoggato = utente;
+            }
+          )
+        }
+      }
+    })
   }
 
 }

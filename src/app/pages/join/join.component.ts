@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Utente } from 'src/app/interfaces/Utente';
 import { CommonService } from 'src/app/services/common.service';
 
 @Component({
@@ -20,8 +19,13 @@ export class JoinComponent {
   nome: string = '';
   cognome: string = '';
   data_di_nascita: Date = new Date();
+  citta: string = '';
+  indirizzo: string = '';
+  cap: string = '';
   email: string = '';
   password: string = '';
+  mydr: boolean = false;
+  token: string = '';
 
   join() {
     // sto dichiarndo una costante crendiali con i valori inseriti nel form
@@ -29,8 +33,13 @@ export class JoinComponent {
       nome: this.nome,
       cognome: this.cognome,
       data_di_nascita: this.data_di_nascita,
+      citta: this.citta,
+      indirizzo: this.indirizzo,
+      cap: this.cap,
       email: this.email,
-      password: this.password
+      password: this.password,
+      mydr: this.mydr,
+      token: this.token
     }
     // stampo le credenzili
     console.log("AVVIO DELLA REGISTAZIONE", utente);
@@ -46,11 +55,16 @@ export class JoinComponent {
   }
 
   reset() {
-    this.email = "";
-    this.password = "";
     this.nome = "";
     this.cognome = "";
     this.data_di_nascita = new Date();
+    this.citta = "";
+    this.indirizzo = "";
+    this.cap = "";
+    this.email = "";
+    this.password = "";
+    this.mydr = false;
+    this.token = "";
 
     console.log("RESET FORM");
     this.router.navigateByUrl('/dashboard');

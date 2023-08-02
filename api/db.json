@@ -283,36 +283,56 @@
   ],
   "utenti": [
     {
-      "id": "1",
       "nome": "Marco",
       "cognome": "Rossi",
       "data_di_nascita": "2000-01-20",
       "email": "marco@mail.it",
-      "password": "passwordmarco"
+      "password": "passwordmarco",
+      "citta": "Roma",
+      "indirizzo": "via italia",
+      "cap": "00001",
+      "mydr": false,
+      "token": "",
+      "id": "1"
     },
     {
-      "id": "2",
       "nome": "Giuseppe",
       "cognome": "Verdi",
       "data_di_nascita": "02-02-2001",
       "email": "giuseppe@mail.it",
-      "password": "passwordgiuseppe"
+      "password": "passwordgiuseppe",
+      "citta": "Milano",
+      "indirizzo": "via torino",
+      "cap": "00002",
+      "mydr": true,
+      "token": "",
+      "id": "2"
     },
     {
-      "id": "3",
       "nome": "Giulia",
       "cognome": "Bianchi",
       "data_di_nascita": "03-03-2002",
       "email": "giulia@mail.it",
-      "password": "passwordgiulia"
+      "password": "passwordgiulia",
+      "citta": "Firenze",
+      "indirizzo": "via milano",
+      "cap": "00003",
+      "mydr": true,
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21lIjoiR2l1bGlhIiwiY29nbm9tZSI6IkJpYW5jaGkiLCJkYXRhX2RpX25hc2NpdGEiOiIwMy0wMy0yMDAyIiwiZW1haWwiOiJnaXVsaWFAbWFpbC5pdCIsInBhc3N3b3JkIjoicGFzc3dvcmRnaXVsaWEiLCJjaXR0YSI6IkZpcmVuemUiLCJpbmRpcml6em8iOiJ2aWEgbWlsYW5vIiwiY2FwIjoiMDAwMDMiLCJpZCI6IjMifQ.SKACPOv5q0tiucyqbNNuoe5ya38h-Cusa1Cz0qgbwx8",
+      "id": "3"
     },
     {
       "nome": "ciccio",
-      "cognome": "bas",
-      "data_di_nascita": "2023-08-02T12:53:31.091Z",
-      "email": "abjhvidfnb@fgfg.it",
-      "password": "cfgudytrfvgh",
-      "id": "0A6VJCy"
+      "cognome": "bastardo",
+      "data_di_nascita": "2000-01-01",
+      "citta": "vfdsfbva",
+      "indirizzo": "vfdsvs",
+      "cap": "fvcedsvbs",
+      "email": "vfdsvbds@mail.it",
+      "password": "vfdsvfds",
+      "mydr": true,
+      "token": "",
+      "id": "FPvdY-P"
     }
   ]
 }
